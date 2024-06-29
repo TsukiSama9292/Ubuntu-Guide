@@ -1,4 +1,4 @@
-# Ubuntu 24.04 LTS Issues and Troubleshooting Solutions by TsukiSama9292(Translated by ChatGPT 3.5)
+# Ubuntu 24.04 LTS Issues and Troubleshooting Solutions by TsukiSama9292 (Translated by ChatGPT 3.5)
 [開啟繁體中文說明文檔](/Tradionnal%20Chinese/README.md)
 
 1. [Important Considerations for Motherboard Brands when Installing Ubuntu](#1-important-considerations-for-motherboard-brands-when-installing-ubuntu)
