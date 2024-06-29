@@ -115,8 +115,59 @@ qnvsm
 ```
 
 # Ubuntu 官方 steam 執行軟體/遊戲 發生錯誤(通常是某個資料夾不見)
-收藏庫 -> 右鍵軟體 -> 屬性 -> 一般 -> 啟動選動
+收藏庫 -> 右鍵軟體 -> 屬性 -> 一般 -> 啟動選動  
 Library -> Right click software -> Properties -> Geraral -> launch options
 ```
 -force-d3d9
+```
+
+# 麥克風無法正常運作
+開啟AlsaMixer，關閉 Auto-Mute Mode
+```
+alsamixer
+```
+1. 按下 F6 -> 選擇 HDA Intel PCH
+2. 按下右方向鍵，找到Auto-Mute Mode，Disabled
+有可能沒有直接生效，重啟就好
+```
+sudo reboot
+```
+
+# 麥克風雜訊過多
+由於有些麥克風老舊或是低階，會導致麥克風會有大量的底噪  
+Windows擁有的Realtek驅動可以開啟雜訊抑制  
+但是linux沒有Realtek這樣官方支援  
+我個人建議使用pactl新增PulseAudio的消除回音模組  
+由於麥克風還是很吵的話  
+開OBS把Echo-Cancel Source設定雜訊消除並且監聽到VirtualSink  
+這時候VirtualMic就會有消除回音模組+OBS設定  
+## 編輯開機sh檔案
+如果沒有資料夾路徑，可以自行建立一個
+```
+sudo nano /etc/profile.d/load_echo_cancel.sh
+```
+## load_echo_cancel.sh的內容
+```
+#!/bin/bash
+echo "Script executed by USER=$USER and XDG_SESSION_TYPE=$XDG_SESSION_TYPE"
+if [ "$USER" = "tuskisama" ] && [ "$XDG_SESSION_TYPE" = "x11" ]; then
+        echo "Executing pactl load-module commands..."
+        pactl load-module module-echo-cancel
+        pactl load-module module-null-sink sink_name=VirtualSink sink_propertie>
+        pactl load-module module-remap-source master=VirtualSink.monitor source>
+fi
+```
+## 賦予權限
+```
+sudo chmod +x /etc/profile.d/load_echo_cancel.sh
+sudo reboot
+```
+## 重開機後
+```
+pactl list short modules | grep echo-cancel
+```
+輸出(類似)
+```
+536870913	module-echo-cancel		
+536870916	module-echo-cancel
 ```
