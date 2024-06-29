@@ -252,7 +252,7 @@ Example Software : [Davinci Resolve on Ubuntu 24.04 LTS](https://youtu.be/Y87MFm
 3. Copy the required library and modify the open location to achieve the desired fix.
 
 
-## 13. Displaying Ubuntu Dock on All Monitors
+# 13. Displaying Ubuntu Dock on All Monitors
 To display the Ubuntu Dock on all monitors, follow these steps to install the Ubuntu GDM extension:
 1. Install the Ubuntu GDM extension:
 ```

@@ -268,7 +268,7 @@ sudo apt install lib名稱1 lib名稱2 ... lib名稱N
 3. 透過複製 lib 與修改開啟位置，達到修復的效果。
 
 
-## 13. Ubuntu 所有螢幕都要顯示快捷工作列( Dock )
+# 13. Ubuntu 所有螢幕都要顯示快捷工作列( Dock )
 1. 安裝 Ubuntu GDM 擴充套件
 ```
 sudo apt install gnome-shell-extension-prefs
