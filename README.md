@@ -1,4 +1,6 @@
 # Ubuntu 24.04 LTS 小問題與疑難雜症 解法方法
+1. [Ubuntu 系統安裝需要注意主機板廠牌](#ubuntu-系統安裝需要注意主機板廠牌)
+1. [Ubuntu 只使用一個USB灌Ubuntu(適用Windows) 解決方法](#ubuntu-只使用一個usb灌ubuntu適用windows-解決方法)
 1. [Ubuntu Nvidia 顯卡驅動模組錯誤 解決方法](#ubuntu-nvidia-driver-模組正確安裝指南最人性化作法)  
 2. [Ubuntu 重新分配磁碟分區 免重灌方法(也適用Windows)](#重新分配系統磁碟分區(不需要重灌))  
 3. [Ubuntu 渲染問題 暫時無法解決](#ubuntu-可能無法解決的渲染視窗問題)  
@@ -8,6 +10,47 @@
 7. [Ubuntu Steam 開啟軟體或遊戲時，發生錯誤 解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見)  
 8. [Ubuntu 麥克風無法正常運作 解決方法](#ubuntu-麥克風無法正常運作)  
 9. [Ubuntu 麥克風雜訊過多 解決方法](#ubuntu-麥克風雜訊過多)  
+
+# Ubuntu 系統安裝需要注意主機板廠牌
+盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
+目前已知微星(msi)主機板非常不適合使用Ubuntu和其他Linux發行版  
+開機的時候會無法正常顯示BIOS和作業系統  
+
+# Ubuntu 只使用一個USB灌Ubuntu(適用Windows) 解決方法
+## 事前準備 : 
+1. windows 10 PC  x 1
+2. Linxu PC x 1 (可改成 windows 10 磁碟分割工具)
+3. USB硬碟 1TB (>50GB)，記得先保存重要檔案
+4. windows 下載 Ubuntu 官方iso
+5. windows 安裝 Rufus
+6. 目標電腦
+```
+1. 盡量選有Ubuntu認證過的主機板廠牌並且確保BIOS版本不要過低。
+2. 原本沒有任何系統的電腦也可以照著本文安裝
+```
+## 流程：
+1. windows插入USB
+2. 開啟Rufus，顯示進階，顯示USB，把iso灌進USB中(整個USB會變成Ubuntu USB Live開機USB)
+3. 開始以磁碟分割工具，Ubuntu叫做硬碟，將完整的Ubuntu USB Live進行磁碟分割，保留10GB左右(極限7GB)，其他的變成空的空間
+```
+此磁碟分區不會在後續安裝時被格式化，不會是系統根目錄或家目錄，而是掛載在media目錄中而已，所以視情況配空間就好，不見得要很小或很大，如果想要做硬碟加密保護資料，可以多配一點點。
+```
+4. 將USB插到想要灌系統的電腦上，進入BIOS(加載BIOS畫面中按下F9~F12其一)
+5. 修改BIOS開機優先序，改成USB(直接看廠牌、型號名)
+6. 保存並退出BIOS設定
+7. 開始初始化Ubuntu安裝環境中...
+8. 跳出選擇介面Try install Ubuntu(掛機也會自動選這個)
+9. 進入Ubuntu，更新一下Ubuntu安裝，重啟Ubuntu安裝
+10. 開始互動式安裝Ubuntu
+11. 選擇完整安裝、給系統安裝顯卡,多媒體Player
+12. **選擇手動分割磁碟**，除了原本的10GB預留的空間，其他的硬碟都改成空的空間，設定開機硬碟為USB，即：產生Boot的根，可以考慮開給它2GB(預設1GB多也可以)，視情況分配硬碟。
+```
+1. 如果電腦只有ubuntu這個系統的話，記得只開ext4，如果是想要雙系統不要照著本文設定。  
+2. 如果是大量開發專案的需求，如Docker，或想要安裝大量軟體， '/' 根目錄，可以開多一點，，我直接佔滿剩下的USB空間，我設定M.2 SSD 200GB，為/home 家目錄。
+```
+13. 建立帳號，然後自動安裝。
+14. 安裝完，重啟電腦。
+15. 打開ubuntu硬碟，把直接10GB的磁碟區格式化，可以自行利用這個空間，我直接改成加密磁碟區。
 
 # Ubuntu Nvidia Driver 模組正確安裝指南(最人性化作法)
 ## Ubuntu系統安裝
