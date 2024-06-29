@@ -11,7 +11,7 @@
 10. [Ubuntu 麥克風無法正常運作](#10-ubuntu-麥克風無法正常運作)  
 11. [Ubuntu 麥克風雜訊過多](#11-ubuntu-麥克風雜訊過多)  
 12. [Ubuntu 缺失 Library 同時 apt 無法找到](#12-ubuntu-缺失-library-同時-apt-無法找到)
-13. [Ubuntu 所有螢幕都要顯示快捷工作列( Dock )](#13-ubuntu-所有螢幕都要顯示快捷工作列-dock-)
+13. [Ubuntu 所有螢幕都要顯示快捷工作列( Dock )](#13-ubuntu-所有螢幕都要顯示快捷工作列-dock)
 
 # 1. Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
@@ -120,7 +120,7 @@ sudo gparted
 # 5. Ubuntu 渲染與視窗鎖定問題
 ## 渲染方式特別
 有一些渲染方式，比較特別可能會黑屏的情況  
-如果是steam的軟體或遊戲，請參考  
+如果是steam的軟體或遊戲，請參考 [Ubuntu Steam 開啟軟體或遊戲 錯誤或黑屏](#9-ubuntu-steam-開啟軟體或遊戲-錯誤或黑屏)  
 ## Steam軟體/遊戲與其他應用程式 視窗鎖定問題
 發生原因 : 
 多螢幕且有內顯，且軟體有自動放到某個顯示器的功能(無上次記憶)，並且無法調整設定修改
@@ -261,7 +261,7 @@ sudo apt install lib名稱1 lib名稱2 ... lib名稱N
 ```
 ## 以下講解如何解決此類問題  
 範例軟體 : [Davinci Resolve on Ubuntu 24.04 LTS](參考影片:https://youtu.be/Y87MFmcy3lc?list=LL)
-1. 當安裝軟體時，可能會看到終端機跳出錯誤，要求使用者安裝指定的 lib。使用 apt 可以解決大部分問題，但找不到 lib 時，請參考 [Davinci Resolve on Ubuntu 24.04 LTS](參考影片: https://youtu.be/Y87MFmcy3lc?list=LL)。
+1. 當安裝軟體時，可能會看到終端機跳出錯誤，要求使用者安裝指定的 lib。使用 apt 可以解決大部分問題，但找不到 lib 時，請參考 [Davinci Resolve on Ubuntu 24.04 LTS](https://youtu.be/Y87MFmcy3lc?list=LL)。
 2. 透過在[Ubuntu 套件搜尋](https://packages.ubuntu.com/)，找需要的 lib 名稱與版本（Ubuntu 24.04 LTS 選擇 Distribution: jammy）。
 3. 透過複製 lib 與修改開啟位置，達到修復的效果。
 
