@@ -116,7 +116,7 @@ sudo gparted
 ```
 
 # Ubuntu 可能無法解決的渲染、視窗問題
-1. 有一些渲染方式，很可能僅適合在windows上執行，即便是最新版的驅動也無法渲染。
+1. 有一些渲染方式，很可能僅適合在windows上執行，即便是最新版的驅動也無法渲染，如果是steam的軟體或遊戲，請參考[Ubuntu Steam 開啟軟體或遊戲時，發生錯誤 解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見)。
 2. 有些應用程式會自動抓取內顯與第一個顯示器，若有滑鼠限制在視窗內的設定，移動視窗很可能不會移動限制視窗範圍，導致完全移動到另一個螢幕會超出點擊範圍。
 
 # Ubuntu 最方便的安裝軟體安裝包方法
@@ -175,7 +175,7 @@ qnvsm
 2. 隨便下載一個軟體/遊戲 -> 取消下載 -> 改成下載Steam Linux Runtime 3.0(sniper) -> 再下載Proton Experimental -> 重啟
 3. 下載想要的軟體/遊戲 -> 收藏庫 -> 右鍵軟體/遊戲 -> 內容 -> 相容性 -> 強制使用特定 Steam Play 相容性工具(打勾) -> 選擇 Proton Experimental -> 啟動軟體/遊戲
 遊戲如果有異常現象，如:畫面閃爍的情況，可以考慮換一個Proton版本，說不定可以解決。
-# Ubuntu 官方 steam 執行軟體/遊戲 發生錯誤(通常是某個資料夾不見)
+# Ubuntu 官方 steam 執行軟體/遊戲 發生錯誤(通常是某個資料夾不見或黑屏)
 收藏庫 -> 右鍵軟體 -> 內容 -> 一般 -> 啟動選動  
 Library -> Right click software -> Properties -> Geraral -> launch options
 ```
