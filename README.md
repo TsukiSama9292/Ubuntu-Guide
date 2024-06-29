@@ -175,7 +175,9 @@ qnvsm
 1. 左上角設定 -> 相容性 -> 為所有產品啟動 Steam Play -> 執行其他產品時使用: Proton Experimental -> 重啟Steam
 2. 隨便下載一個軟體/遊戲 -> 取消下載 -> 改成下載Steam Linux Runtime 3.0(sniper) -> 再下載Proton Experimental -> 重啟
 3. 下載想要的軟體/遊戲 -> 收藏庫 -> 右鍵軟體/遊戲 -> 內容 -> 相容性 -> 強制使用特定 Steam Play 相容性工具(打勾) -> 選擇 Proton Experimental -> 啟動軟體/遊戲
-遊戲如果有異常現象，如:畫面閃爍的情況，可以考慮換一個Proton版本，說不定可以解決。
+遊戲如果有異常現象，如:畫面閃爍的情況，可以考慮換一個Proton版本，說不定可以解決。  
+補充知識 : 其實Linux切換TTY(session)登入到數個不同的使用可，可能可以做到Steam遊戲多開，但請注意連網遊戲可能會檢查Mac Address，只有一個網路介面卡的電腦，很可能被官方擋住或Ban掉。
+
 # Ubuntu 官方 steam 執行軟體/遊戲 發生錯誤(通常是某個資料夾不見或黑屏)
 收藏庫 -> 右鍵軟體 -> 內容 -> 一般 -> 啟動選動  
 Library -> Right click software -> Properties -> Geraral -> launch options
