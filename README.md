@@ -16,6 +16,7 @@
 13. [Displaying the Dock on All Monitors in Ubuntu](#13-displaying-ubuntu-dock-on-all-monitors)
 14. [Setting Up Microphone Loopback Functionality on Ubuntu](#14-setting-up-microphone-loopback-functionality-on-ubuntu)
 15. [Unity Hub Cannot Run On Ubuntu](#15-unity-hub-cannot-run-on-ubuntu)
+16. [Copying User Configuration on Ubuntu](#16-copying-user-configuration-on-ubuntu)
 
 # 1. Important Considerations for Motherboard Brands when Installing Ubuntu
 It's recommended to choose motherboards with official Ubuntu certification for installing the Ubuntu system, such as Gigabyte and ASUS. Currently, MSI motherboards are known to be very unsuitable for Ubuntu and other Linux distributions. There may be issues with properly displaying the BIOS and operating system during startup. 
@@ -309,3 +310,15 @@ The simplest and most direct method is to disable all application restrictions.
 sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 ```
 Restart Unity Hub, and it should run successfully.
+
+# 16. Copying User Configuration on Ubuntu
+Copy desktop environment settings:
+```
+cp -r /home/olduser/.config /home/newuser/
+cp -r /home/olduser/.local /home/newuser/
+```
+Update permissions for the new user:
+```
+sudo chown -R newuser:newuser /home/newuser/.config
+sudo chown -R newuser:newuser /home/newuser/.local
+```
