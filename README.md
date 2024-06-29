@@ -11,6 +11,7 @@
 10. [Ubuntu 麥克風無法正常運作 解決方法](#ubuntu-麥克風無法正常運作)  
 11. [Ubuntu 麥克風雜訊過多 解決方法](#ubuntu-麥克風雜訊過多)  
 12. [Ubuntu 缺失Library同時無法找到 解決方法](#ubuntu-缺失library同時無法找到-解決方法)
+13. [Ubuntu 切換應用程式快捷鍵 所有螢幕都要顯示](#ubuntu-gdm-切換應用程式快捷鍵工作列-所有螢幕都要顯示)
 
 # Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
