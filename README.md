@@ -130,6 +130,7 @@ Library -> Right click software -> Properties -> Geraral -> launch options
 ```
 -force-d3d9
 ```
+重啟遊戲，即可
 
 # Ubuntu 麥克風無法正常運作
 開啟AlsaMixer，關閉 Auto-Mute Mode
