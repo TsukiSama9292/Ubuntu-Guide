@@ -3,7 +3,7 @@
 2. [Ubuntu 重新分配磁碟分區 免重灌方法(也適用Windows)](#重新分配系統磁碟分區(不需要重灌))  
 3. [Ubuntu 渲染問題 暫時無法解決](#ubuntu-可能無法解決的渲染視窗問題)  
 4. [Ubuntu 最方便的安裝軟體安裝包 解決方法](#ubuntu-最方便的安裝軟體安裝包方法)  
-5. [Ubuntu CPu , RAM , Nvidia GPU 使用率顯示 解決方法](#ubuntu-cpu--ram--nvidia-gpu-顯示)  
+5. [Ubuntu CPU , RAM , Nvidia GPU 使用率顯示 解決方法](#ubuntu-cpu--ram--nvidia-gpu-顯示)  
 6. [Ubuntu 開啟windows的Steam遊戲 解決方法](#ubuntu-開-windows-的-steam-軟體遊戲-解決方法)  
 7. [Ubuntu Steam 開啟軟體或遊戲時，發生錯誤 解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見)  
 8. [Ubuntu 麥克風無法正常運作 解決方法](#ubuntu-麥克風無法正常運作)  
