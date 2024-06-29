@@ -10,7 +10,7 @@
 9. [Ubuntu Steam 開啟軟體或遊戲時，發生錯誤 解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見)  
 10. [Ubuntu 麥克風無法正常運作 解決方法](#ubuntu-麥克風無法正常運作)  
 11. [Ubuntu 麥克風雜訊過多 解決方法](#ubuntu-麥克風雜訊過多)  
-12. [Ubuntu 軟體缺失 Library 解決方法](#ubuntu-軟體缺失library-解決方法)
+12. [Ubuntu 缺失Library同時無法找到 解決方法](#ubuntu-缺失library同時無法找到-解決方法)
 
 # Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
@@ -238,16 +238,19 @@ pactl list short modules | grep echo-cancel
 536870916	module-echo-cancel
 ```
 
-# Ubuntu 軟體缺失Library 解決方法
-基本上絕大多數的Linux軟體會依賴使用者自行安裝Linux的Library(簡稱:lib)  
-讓軟體自身更加輕量(因為數個軟體共用lib，所有佔用的空間變更小)  
-但是有些軟體會榜定特定版本的Library(放到自身資料夾底下)  
-由於以下指令不是萬能的 不能獲取已經移除的lib
+# Ubuntu 缺失Library同時無法找到 解決方法
+## 了解基礎背景知識
+基本上，絕大多數的 Linux 軟體會依賴使用者自行安裝 Linux 的 Library(簡稱：lib)  
+這讓多數軟體自身更加輕量(因為數個軟體共用 lib，所以佔用的空間變更少)  
+但是，有些軟體會綁定特定版本的 Library  
+由於 lib 有可能被移除，使用 apt 安裝 lib 並不是萬能的，不能獲取已經移除的 lib  
 ```
 sudo apt install lib名稱1 lib名稱2 ... lib名稱N
 ```
-所以以下講解如何解決此類問題:
-範例軟體:[Davinci Resolve on Ubuntu 24.04 LTS](參考影片:https://youtu.be/Y87MFmcy3lc?list=LL)
-1. 當安裝軟體時，可能會看到，終端機跳出錯誤，要求使用者安裝指定的lib，使用apt可以解決大部分問題，但找不到lib請參考[Davinci Resolve on Ubuntu 24.04 LTS](參考影片:https://youtu.be/Y87MFmcy3lc?list=LL)
-2. 透過在[ Ubuntu 套件搜尋 ](https://packages.ubuntu.com/)，找需要的lib名稱與版本(Ubuntu 24.04 LTS 選擇 Distribution : jammy)
-3. 透過複製lib與修改開啟位置，達到修復的效果
+## 以下講解如何解決此類問題  
+範例軟體 : [Davinci Resolve on Ubuntu 24.04 LTS](參考影片:https://youtu.be/Y87MFmcy3lc?list=LL)
+1. 當安裝軟體時，可能會看到終端機跳出錯誤，要求使用者安裝指定的 lib。使用 apt 可以解決大部分問題，但找不到 lib 時，請參考 [Davinci Resolve on Ubuntu 24.04 LTS](參考影片: https://youtu.be/Y87MFmcy3lc?list=LL)。
+2. 透過在[Ubuntu 套件搜尋](https://packages.ubuntu.com/)，找需要的 lib 名稱與版本（Ubuntu 24.04 LTS 選擇 Distribution: jammy）。
+3. 透過複製 lib 與修改開啟位置，達到修復的效果。
+
+
