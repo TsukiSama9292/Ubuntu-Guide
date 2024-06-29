@@ -1,4 +1,4 @@
-# Ubuntu 24.04 LTS Issues and Troubleshooting Solutions by TsukiSama9292
+# Ubuntu 24.04 LTS Issues and Troubleshooting Solutions by TsukiSama9292(Translated by ChatGPT 3.5)
 [開啟繁體中文說明文檔](/Tradionnal%20Chinese/README.md)
 
 1. [Important Considerations for Motherboard Brands when Installing Ubuntu](#1-important-considerations-for-motherboard-brands-when-installing-ubuntu)
@@ -14,6 +14,7 @@
 11. [Excessive Microphone Noise in Ubuntu](#11-too-much-noise-from-mic-on-ubuntu)
 12. [Missing Libraries in Ubuntu and apt Cannot Find Them](#12-ubuntu-missing-libraries-and-unable-to-find-with-apt)
 13. [Displaying the Dock on All Monitors in Ubuntu](#13-displaying-ubuntu-dock-on-all-monitors)
+14. [Setting Up Microphone Loopback Functionality on Ubuntu](#14-setting-up-microphone-loopback-functionality-on-ubuntu)
 
 # 1. Important Considerations for Motherboard Brands when Installing Ubuntu
 It's recommended to choose motherboards with official Ubuntu certification for installing the Ubuntu system, such as Gigabyte and ASUS. Currently, MSI motherboards are known to be very unsuitable for Ubuntu and other Linux distributions. There may be issues with properly displaying the BIOS and operating system during startup. 
@@ -263,3 +264,39 @@ sudo apt install gnome-shell-extension-prefs
 4. Under "Position and Size", enable "Show on All Displays".
 
 This will ensure that the Ubuntu Dock is visible on all monitors connected to your system.
+
+# 14. Setting Up Microphone Loopback Functionality on Ubuntu
+Ubuntu comes pre-installed with this feature by default, so you can skip this step.
+```
+sudo apt-get update
+sudo apt-get install alsa-utils
+```
+Create ALSA configuration file:
+```
+nano ~/.asoundrc
+```
+Add the following content to the file. Adjust the configuration as necessary; currently, the default speaker is set as the monitoring device, and it monitors a virtual speaker.
+```
+pcm.!default {
+    type pulse
+    fallback "sysdefault"
+    hint {
+        show on
+        description "Default ALSA Output (currently PulseAudio Sound Server)"
+    }
+}
+
+ctl.!default {
+    type pulse
+    fallback "sysdefault"
+}
+
+pcm.VirtualMic {
+    type pulse
+    device "VirtualMic"
+}
+```
+Use arecord to record audio and aplay to play it back in real-time. Press Ctrl + C to stop monitoring.
+```
+arecord -D VirtualMic -f cd | aplay -
+```

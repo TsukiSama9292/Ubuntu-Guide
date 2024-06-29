@@ -1,4 +1,4 @@
-# Ubuntu 24.04 LTS 小問題與疑難雜症 解法方法 by TsukiSama9292
+# Ubuntu 24.04 LTS 問題和故障排除解決方案 by TsukiSama9292
 [Open the English instruction document](/README.md)
 
 1. [Ubuntu 系統安裝需要注意主機板廠牌](#1-ubuntu-系統安裝需要注意主機板廠牌)
@@ -14,6 +14,7 @@
 11. [Ubuntu 麥克風雜訊過多](#11-ubuntu-麥克風雜訊過多)  
 12. [Ubuntu 缺失 Library 同時 apt 無法找到](#12-ubuntu-缺失-library-同時-apt-無法找到)
 13. [Ubuntu 所有螢幕都要顯示快捷工作列( Dock )](#13-ubuntu-所有螢幕都要顯示快捷工作列-dock)
+14. [Ubuntu 設定麥克風耳返功能](#14-ubuntu-設定麥克風耳返功能)
 
 # 1. Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
@@ -276,6 +277,7 @@ sudo apt install gnome-shell-extension-prefs
 2. 開啟 擴充套件 程式  
 3. 點擊 Ubuntu Dock 的三個點再按下設定  
 4. 位置與大小 -> Dock 顯示於 所有螢幕(打勾)
+Ubuntu Dock 將在系統上連接的所有顯示器上都能見到。
 
 # 14. Ubuntu 設定麥克風耳返功能
 Ubuntu已有預設安裝，可略過。
