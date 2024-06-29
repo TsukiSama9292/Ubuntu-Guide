@@ -10,7 +10,7 @@
 9. [Ubuntu Steam 開啟軟體或遊戲時，發生錯誤 解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見)  
 10. [Ubuntu 麥克風無法正常運作 解決方法](#ubuntu-麥克風無法正常運作)  
 11. [Ubuntu 麥克風雜訊過多 解決方法](#ubuntu-麥克風雜訊過多)  
-12. [Ubuntu 軟體缺失Library 解決方法](#ubuntu-軟體缺失library-解決方法)
+12. [Ubuntu 軟體缺失 Library 解決方法](#ubuntu-軟體缺失library-解決方法)
 
 # Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
