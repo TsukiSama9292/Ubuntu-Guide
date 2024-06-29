@@ -1,4 +1,4 @@
-# Ubuntu 24.04 LTS 小問題與疑難雜症 解法方法
+# Ubuntu 24.04 LTS 小問題與疑難雜症 解法方法 by TsukiSama9292
 [Open the English instruction document](/README.md)
 
 1. [Ubuntu 系統安裝需要注意主機板廠牌](#1-ubuntu-系統安裝需要注意主機板廠牌)
