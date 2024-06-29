@@ -1,15 +1,16 @@
 # Ubuntu 24.04 LTS 小問題與疑難雜症 解法方法
 1. [Ubuntu 系統安裝需要注意主機板廠牌](#ubuntu-系統安裝需要注意主機板廠牌)
-1. [Ubuntu 只使用一個USB灌Ubuntu(適用Windows) 解決方法](#ubuntu-只使用一個usb灌ubuntu適用windows-解決方法)
-1. [Ubuntu Nvidia 顯卡驅動模組錯誤 解決方法](#ubuntu-nvidia-driver-模組正確安裝指南最人性化作法)  
-2. [Ubuntu 重新分配磁碟分區 免重灌方法(也適用Windows)](#重新分配系統磁碟分區(不需要重灌))  
-3. [Ubuntu 渲染問題 暫時無法解決](#ubuntu-可能無法解決的渲染視窗問題)  
-4. [Ubuntu 最方便的安裝軟體安裝包 解決方法](#ubuntu-最方便的安裝軟體安裝包方法)  
-5. [Ubuntu CPU , RAM , Nvidia GPU 使用率顯示 解決方法](#ubuntu-cpu--ram--nvidia-gpu-顯示)  
-6. [Ubuntu 開啟windows的Steam遊戲 解決方法](#ubuntu-開-windows-的-steam-軟體遊戲-解決方法)  
-7. [Ubuntu Steam 開啟軟體或遊戲時，發生錯誤 解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見)  
-8. [Ubuntu 麥克風無法正常運作 解決方法](#ubuntu-麥克風無法正常運作)  
-9. [Ubuntu 麥克風雜訊過多 解決方法](#ubuntu-麥克風雜訊過多)  
+2. [Ubuntu 只使用一個USB灌Ubuntu(適用Windows) 解決方法](#ubuntu-只使用一個usb灌ubuntu適用windows-解決方法)
+3. [Ubuntu Nvidia 顯卡驅動模組錯誤 解決方法](#ubuntu-nvidia-driver-模組正確安裝指南最人性化作法)  
+4. [Ubuntu 重新分配磁碟分區 免重灌方法(也適用Windows)](#重新分配系統磁碟分區(不需要重灌))  
+5. [Ubuntu 渲染問題 暫時無法解決](#ubuntu-可能無法解決的渲染視窗問題)  
+6. [Ubuntu 最方便的安裝軟體安裝包 解決方法](#ubuntu-最方便的安裝軟體安裝包方法)  
+7. [Ubuntu CPU , RAM , Nvidia GPU 使用率顯示 解決方法](#ubuntu-cpu--ram--nvidia-gpu-顯示)  
+8. [Ubuntu 開啟windows的Steam遊戲 解決方法](#ubuntu-開-windows-的-steam-軟體遊戲-解決方法)  
+9. [Ubuntu Steam 開啟軟體或遊戲時，發生錯誤 解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見)  
+10. [Ubuntu 麥克風無法正常運作 解決方法](#ubuntu-麥克風無法正常運作)  
+11. [Ubuntu 麥克風雜訊過多 解決方法](#ubuntu-麥克風雜訊過多)  
+12. [Ubuntu 軟體缺失Library 解決方法](#ubuntu-軟體缺失library-解決方法)
 
 # Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
@@ -236,3 +237,17 @@ pactl list short modules | grep echo-cancel
 536870913	module-echo-cancel		
 536870916	module-echo-cancel
 ```
+
+# Ubuntu 軟體缺失Library 解決方法
+基本上絕大多數的Linux軟體會依賴使用者自行安裝Linux的Library(簡稱:lib)  
+讓軟體自身更加輕量(因為數個軟體共用lib，所有佔用的空間變更小)  
+但是有些軟體會榜定特定版本的Library(放到自身資料夾底下)  
+由於以下指令不是萬能的 不能獲取已經移除的lib
+```
+sudo apt install lib名稱1 lib名稱2 ... lib名稱N
+```
+所以以下講解如何解決此類問題:
+範例軟體:[Davinci Resolve on Ubuntu 24.04 LTS](參考影片:https://youtu.be/Y87MFmcy3lc?list=LL)
+1. 當安裝軟體時，可能會看到，終端機跳出錯誤，要求使用者安裝指定的lib，使用apt可以解決大部分問題，但找不到lib請參考[Davinci Resolve on Ubuntu 24.04 LTS](參考影片:https://youtu.be/Y87MFmcy3lc?list=LL)
+2. 透過在[ Ubuntu 套件搜尋 ](https://packages.ubuntu.com/)，找需要的lib名稱與版本(Ubuntu 24.04 LTS 選擇 Distribution : jammy)
+3. 透過複製lib與修改開啟位置，達到修復的效果
