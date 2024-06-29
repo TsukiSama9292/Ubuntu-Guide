@@ -15,6 +15,7 @@
 12. [Ubuntu 缺失 Library 同時 apt 無法找到](#12-ubuntu-缺失-library-同時-apt-無法找到)
 13. [Ubuntu 所有螢幕都要顯示快捷工作列( Dock )](#13-ubuntu-所有螢幕都要顯示快捷工作列-dock)
 14. [Ubuntu 設定麥克風耳返功能](#14-ubuntu-設定麥克風耳返功能)
+15. [Ubuntu Unity Hub 無法運行](#15-ubuntu-unity-hub-無法運行)
 
 # 1. Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
@@ -314,3 +315,11 @@ pcm.VirtualMic {
 ```
 arecord -D VirtualMic -f cd | aplay -
 ```
+
+# 15. Ubuntu Unity Hub 無法運行
+點擊開啟Unity Hub 等待許久都沒有反應  
+最簡單暴力的作法，停用所有應用程式的限制  
+```
+sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+```
+重啟Unity Hub，即可運行

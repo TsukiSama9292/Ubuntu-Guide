@@ -15,7 +15,7 @@
 12. [Missing Libraries in Ubuntu and apt Cannot Find Them](#12-ubuntu-missing-libraries-and-unable-to-find-with-apt)
 13. [Displaying the Dock on All Monitors in Ubuntu](#13-displaying-ubuntu-dock-on-all-monitors)
 14. [Setting Up Microphone Loopback Functionality on Ubuntu](#14-setting-up-microphone-loopback-functionality-on-ubuntu)
-
+15. [Unity Hub Cannot Run On Ubuntu](#15-unity-hub-cannot-run-on-ubuntu)
 # 1. Important Considerations for Motherboard Brands when Installing Ubuntu
 It's recommended to choose motherboards with official Ubuntu certification for installing the Ubuntu system, such as Gigabyte and ASUS. Currently, MSI motherboards are known to be very unsuitable for Ubuntu and other Linux distributions. There may be issues with properly displaying the BIOS and operating system during startup. 
 
@@ -300,3 +300,11 @@ Use arecord to record audio and aplay to play it back in real-time. Press Ctrl +
 ```
 arecord -D VirtualMic -f cd | aplay -
 ```
+
+# 15. Unity Hub Cannot Run On Ubuntu
+Click to open Unity Hub and wait for a long time with no response.
+The simplest and most direct method is to disable all application restrictions.
+```
+sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+```
+Restart Unity Hub, and it should run successfully.
