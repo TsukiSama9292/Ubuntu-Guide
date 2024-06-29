@@ -1,3 +1,13 @@
+# Ubuntu 24.04 LTS 發現的問題 或 疑難雜症解法方法
+[Ubuntu Nvidia 顯卡驅動有問題解決方法](#ubuntu-nvidia-driver-模組正確安裝指南最人性化作法)  
+[Ubuntu 重新分配磁碟分區 免重灌方法(也適用Windows)](#重新分配系統磁碟分區(不需要重灌))  
+[Ubuntu 渲染問題 目前無法解決](#ubuntu-可能無法解決的渲染視窗問題)  
+[Ubuntu 最方便的安裝軟體安裝包方法](#ubuntu-最方便的安裝軟體安裝包方法)  
+[Ubuntu CPu , RAM , Nvidia GPU 使用率顯示](#ubuntu-cpu--ram--nvidia-gpu-顯示)  
+[Ubuntu Steam 開啟軟體或遊戲時，發生錯誤解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見)  
+[Ubuntu 麥克風無法正常運作](#ubuntu-麥克風無法正常運作)  
+[Ubuntu 麥克風雜訊過多](#ubuntu-麥克風雜訊過多)  
+
 # Ubuntu Nvidia Driver 模組正確安裝指南(最人性化作法)
 ## Ubuntu系統安裝
 1. 基本上照著常規流程，盡量安裝系統提供的東西，省得麻煩
@@ -46,7 +56,7 @@ nvidia              54566912  33 nvidia_uvm,nvidia_modeset
 video                  73728  2 i915,nvidia_modeset
 ```
 
-# 不重灌並且重新分配系統磁碟分區
+# 重新分配系統磁碟分區(不需要重灌)
 1. 備份重要資料(都不重要就略過)
 2. 透過Ubuntu LIVE USB開機
 3. 重新磁碟分區大小並且移動配置
@@ -121,7 +131,7 @@ Library -> Right click software -> Properties -> Geraral -> launch options
 -force-d3d9
 ```
 
-# 麥克風無法正常運作
+# Ubuntu 麥克風無法正常運作
 開啟AlsaMixer，關閉 Auto-Mute Mode
 ```
 alsamixer
@@ -133,7 +143,7 @@ alsamixer
 sudo reboot
 ```
 
-# 麥克風雜訊過多
+# Ubuntu 麥克風雜訊過多
 由於有些麥克風老舊或是低階，會導致麥克風會有大量的底噪  
 Windows擁有的Realtek驅動可以開啟雜訊抑制  
 但是linux沒有Realtek這樣官方支援  
