@@ -1,60 +1,60 @@
 # Ubuntu 24.04 LTS 小問題與疑難雜症 解法方法
-1. [Ubuntu 系統安裝需要注意主機板廠牌](#ubuntu-系統安裝需要注意主機板廠牌)
-2. [Ubuntu 只使用一個USB灌Ubuntu(適用Windows) 解決方法](#ubuntu-只使用一個usb灌ubuntu適用windows-解決方法)
-3. [Ubuntu Nvidia 顯卡驅動模組錯誤 解決方法](#ubuntu-nvidia-driver-模組正確安裝指南最人性化作法)  
-4. [Ubuntu 重新分配磁碟分區 免重灌方法(也適用Windows)](#重新分配系統磁碟分區(不需要重灌))  
-5. [Ubuntu 渲染與視窗鎖定問題 解決方法](#ubuntu-可能無法解決的渲染視窗問題)  
-6. [Ubuntu 最方便的安裝軟體安裝包 解決方法](#ubuntu-最方便的安裝軟體安裝包方法)  
-7. [Ubuntu CPU , RAM , Nvidia GPU 使用率顯示 解決方法](#ubuntu-cpu--ram--nvidia-gpu-顯示)  
-8. [Ubuntu 開啟windows的Steam遊戲 解決方法](#ubuntu-開-windows-的-steam-軟體遊戲-解決方法)  
-9. [Ubuntu Steam 開啟軟體或遊戲時，發生錯誤 解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見或黑屏)  
-10. [Ubuntu 麥克風無法正常運作 解決方法](#ubuntu-麥克風無法正常運作)  
-11. [Ubuntu 麥克風雜訊過多 解決方法](#ubuntu-麥克風雜訊過多)  
-12. [Ubuntu 缺失Library同時無法找到 解決方法](#ubuntu-缺失library同時無法找到-解決方法)
-13. [Ubuntu 切換應用程式快捷鍵 所有螢幕都要顯示](#ubuntu-gdm-切換應用程式快捷鍵工作列-所有螢幕都要顯示)
+1. [Ubuntu 系統安裝需要注意主機板廠牌](#1-ubuntu-系統安裝需要注意主機板廠牌)
+2. [Ubuntu 只使用一個USB灌Ubuntu(適用Windows)](#2-ubuntu-只使用一個usb灌ubuntu適用windows)
+3. [Ubuntu Nvidia 顯卡驅動模組錯誤 最人性化解決方法](#3-ubuntu-nvidia-顯卡驅動模組錯誤-最人性化解決方法)  
+4. [Ubuntu 重新分配磁碟分區 免重灌方法(適用Windows)](#4-ubuntu-重新分配磁碟分區-免重灌方法適用windows)  
+5. [Ubuntu 渲染與視窗鎖定問題](#5-ubuntu-渲染與視窗鎖定問題)  
+6. [Ubuntu 最方便的安裝軟體安裝包的方法](#6-ubuntu-最方便的安裝軟體安裝包的方法)  
+7. [Ubuntu CPU , RAM , Nvidia GPU 使用率 顯示方法](#7-ubuntu-cpu--ram--nvidia-gpu-使用率-顯示方法)  
+8. [Ubuntu 開啟 Windows 的 Steam 遊戲方法](#8-ubuntu-開啟-windows-的-steam-遊戲方法)  
+9. [Ubuntu Steam 開啟軟體或遊戲 錯誤或黑屏](#9-ubuntu-steam-開啟軟體或遊戲-錯誤或黑屏)  
+10. [Ubuntu 麥克風無法正常運作](#10-ubuntu-麥克風無法正常運作)  
+11. [Ubuntu 麥克風雜訊過多](#11-ubuntu-麥克風雜訊過多)  
+12. [Ubuntu 缺失 Library 同時 apt 無法找到](#12-ubuntu-缺失-library-同時-apt-無法找到)
+13. [Ubuntu 所有螢幕都要顯示快捷工作列( Dock )](#13-ubuntu-所有螢幕都要顯示快捷工作列-dock-)
 
-# Ubuntu 系統安裝需要注意主機板廠牌
+# 1. Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
-目前已知微星(msi)主機板非常不適合使用Ubuntu和其他Linux發行版  
-開機的時候會無法正常顯示BIOS和作業系統  
+目前已知微星(MSI)主機板非常不適合使用Ubuntu和其他Linux發行版  
+開機的時候很可能會無法正常顯示BIOS和作業系統  
 
-# Ubuntu 只使用一個USB灌Ubuntu(適用Windows) 解決方法
+# 2. Ubuntu 只使用一個USB灌Ubuntu(適用Windows)
 ## 事前準備 : 
-1. windows 10 PC x 1 (Rufus的需求，當然可以換成別的軟體與對應的作業系統)
+1. Windows 10 PC x 1 (Rufus的系統需求，可以換成別的工具製作開機USB硬碟)
 2. Linxu PC x 1 (可改成 windows 10 磁碟分割工具)
-3. USB硬碟 1TB (>50GB)，記得先保存重要檔案
-4. windows 下載 Ubuntu 官方iso
-5. windows 安裝 Rufus
+3. USB 3.0 外接硬碟 N GB(速度快容量大較好)，記得先保存重要檔案
+4. Windows 下載 Ubuntu 官方iso
+5. Windows 安裝 Rufus
 6. 目標設備 x N 台(一些邊緣運算裝置，允許螢幕輸出也可以這樣做)
 ```
-1. 盡量選有Ubuntu認證過的主機板廠牌並且確保BIOS版本不要過低。
+1. 盡量選有Ubuntu認證過的主機板廠牌並且確保BIOS版本不要過低
 2. 原本沒有任何系統的電腦也可以照著本文安裝
 ```
 ## 流程：
-1. windows插入USB
+```
+如果電腦只有ubuntu這個系統的話，記得用成ext4檔案系統
+但如果是想要雙系統不要照著本文設定  
+```
+1. Windows插入USB
 2. 開啟Rufus，顯示進階，顯示USB，把iso灌進USB中(整個USB會變成Ubuntu USB Live開機USB)
 3. 開始以磁碟分割工具，Ubuntu叫做硬碟，將完整的Ubuntu USB Live進行磁碟分割，保留10GB左右(極限7GB)，其他的變成空的空間
 ```
-此磁碟分區不會在後續安裝時被格式化，不會是系統根目錄或家目錄，而是掛載在media目錄中而已，所以視情況配空間就好，不見得要很小或很大，如果想要做硬碟加密保護資料，可以多配一點點。
+保留10GB的磁碟分區不會在後續安裝時被格式化，也不會是系統根目錄或家目錄，而是掛載在media目錄中而已，所以視情況配空間就好，不見得要極限值或很大，如果想要做硬碟加密保護資料，可以多配一點點
 ```
-4. 將USB插到想要灌系統的電腦上，進入BIOS(加載BIOS畫面中按下F9~F12其一)
-5. 修改BIOS開機優先序，改成USB(直接看廠牌、型號名)
+4. 將USB插到想要灌系統的電腦上，進入BIOS(加載BIOS畫面中按下F9~F12,del其一)
+5. 修改BIOS開機磁碟優先序，改成USB(直接對廠牌、型號名就知道哪個是Ubuntu USB LIVE)
 6. 保存並退出BIOS設定
 7. 開始初始化Ubuntu安裝環境中...
 8. 跳出選擇介面Try install Ubuntu(掛機也會自動選這個)
 9. 進入Ubuntu，更新一下Ubuntu安裝，重啟Ubuntu安裝
 10. 開始互動式安裝Ubuntu
-11. 選擇完整安裝、給系統安裝顯卡,多媒體Player
+11. 選擇完整安裝、給系統安裝顯卡,多媒體Player(播放器可以不安裝)
 12. **選擇手動分割磁碟**，除了原本的10GB預留的空間，其他的硬碟都改成空的空間，設定開機硬碟為USB，即：產生Boot的根，可以考慮開給它2GB(預設1GB多也可以)，視情況分配硬碟。
-```
-1. 如果電腦只有ubuntu這個系統的話，記得只開ext4，如果是想要雙系統不要照著本文設定。  
-2. 如果是大量開發專案的需求，如Docker，或想要安裝大量軟體， '/' 根目錄，可以開多一點，，我直接佔滿剩下的USB空間，我設定M.2 SSD 200GB，為/home 家目錄。
-```
 13. 建立帳號，然後自動安裝。
 14. 安裝完，重啟電腦。
 15. 打開ubuntu硬碟，把直接10GB的磁碟區格式化，可以自行利用這個空間，我直接改成加密磁碟區。
 
-# Ubuntu Nvidia Driver 模組正確安裝指南(最人性化作法)
+# 3. Ubuntu Nvidia 顯卡驅動模組錯誤 最人性化解決方法
 ## Ubuntu系統安裝
 1. 基本上照著常規流程，盡量安裝系統提供的東西，省得麻煩
 ## Ubuntu改圖顯驅動（可選）
@@ -102,7 +102,7 @@ nvidia              54566912  33 nvidia_uvm,nvidia_modeset
 video                  73728  2 i915,nvidia_modeset
 ```
 
-# 重新分配系統磁碟分區(不需要重灌)
+# 4. Ubuntu 重新分配磁碟分區 免重灌方法(適用Windows)
 1. 備份重要資料(都不重要就略過)
 2. 透過Ubuntu LIVE USB開機
 3. 重新磁碟分區大小並且移動配置
@@ -117,10 +117,10 @@ video                  73728  2 i915,nvidia_modeset
 sudo gparted
 ```
 
-# Ubuntu 可能無法解決的渲染、視窗問題
+# 5. Ubuntu 渲染與視窗鎖定問題
 ## 渲染方式特別
 有一些渲染方式，比較特別可能會黑屏的情況  
-如果是steam的軟體或遊戲，請參考 [Ubuntu Steam 開啟軟體或遊戲時，發生錯誤 解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見)
+如果是steam的軟體或遊戲，請參考  
 ## Steam軟體/遊戲與其他應用程式 視窗鎖定問題
 發生原因 : 
 多螢幕且有內顯，且軟體有自動放到某個顯示器的功能(無上次記憶)，並且無法調整設定修改
@@ -129,8 +129,8 @@ sudo gparted
 ### 修改主要顯示器(把主要顯示器改成內顯)
 打開Ubuntu設定，把顯示器設定改成內顯的螢幕，這樣絕對可以正常使用
 
-# Ubuntu 最方便的安裝軟體安裝包方法
-由於linux適用的軟體安裝包副檔名(拓展名)非常多樣  
+# 6. Ubuntu 最方便的安裝軟體安裝包的方法
+由於Linux適用的軟體安裝包副檔名(拓展名)非常多樣  
 若使用GDM的話，最方便安裝軟體的方法  
 即是原生GDM工具『Software』  
 ## 重新安裝GDM工具包
@@ -144,7 +144,7 @@ sudo apt install gnome-software
 3. 滑鼠左鍵雙擊開啟(或是右鍵 使用安裝軟體開啟)
 4. 跳至『軟體』執行安裝
 
-# Ubuntu CPU , RAM , Nvidia GPU 顯示 
+# 7. Ubuntu CPU , RAM , Nvidia GPU 使用率 顯示方法
 ## CPU , RAM 顯示終端機
 ```
 sudo apt update
@@ -180,7 +180,7 @@ sudo install build/qnvsm /usr/local/bin
 qnvsm
 ```
 
-# Ubuntu 開 Windows 的 Steam 軟體/遊戲 解決方法
+# 8. Ubuntu 開啟 Windows 的 Steam 遊戲方法
 1. 左上角設定 -> 相容性 -> 為所有產品啟動 Steam Play -> 執行其他產品時使用: Proton Experimental -> 重啟Steam
 2. 隨便下載一個軟體/遊戲 -> 取消下載 -> 改成下載Steam Linux Runtime 3.0(sniper) -> 再下載Proton Experimental -> 重啟
 3. 下載想要的軟體/遊戲 -> 收藏庫 -> 右鍵軟體/遊戲 -> 內容 -> 相容性 -> 強制使用特定 Steam Play 相容性工具(打勾) -> 選擇 Proton Experimental -> 啟動軟體/遊戲
@@ -188,7 +188,7 @@ qnvsm
 遊戲如果有異常現象，如:畫面閃爍的情況，可以考慮換一個Proton版本，說不定可以解決。  
 補充知識 : 其實Linux切換TTY(session)登入到數個不同的使用者，可能可以做到Steam遊戲多開，但請注意連網遊戲可能會檢查Mac Address，只有一個網路介面卡的電腦，很可能被官方擋住或Ban掉。
 
-# Ubuntu 官方 steam 執行軟體/遊戲 發生錯誤(通常是某個資料夾不見或黑屏)
+# 9. Ubuntu Steam 開啟軟體或遊戲 錯誤或黑屏
 收藏庫 -> 右鍵軟體 -> 內容 -> 一般 -> 啟動選動  
 Library -> Right click software -> Properties -> Geraral -> launch options
 ```
@@ -196,26 +196,26 @@ Library -> Right click software -> Properties -> Geraral -> launch options
 ```
 重啟遊戲，即可
 
-# Ubuntu 麥克風無法正常運作
-開啟AlsaMixer，關閉 Auto-Mute Mode
+# 10. Ubuntu 麥克風無法正常運作
+開啟 AlsaMixer，關閉 Auto-Mute Mode
 ```
 alsamixer
 ```
 1. 按下 F6 -> 選擇 HDA Intel PCH
-2. 按下右方向鍵，找到Auto-Mute Mode，Disabled
+2. 按下右方向鍵，找到 Auto-Mute Mode，Disabled
 有可能沒有直接生效，重啟就好
 ```
 sudo reboot
 ```
 
-# Ubuntu 麥克風雜訊過多
+# 11. Ubuntu 麥克風雜訊過多
 由於有些麥克風老舊或是低階，會導致麥克風會有大量的底噪  
-Windows擁有的Realtek驅動可以開啟雜訊抑制  
-但是linux沒有Realtek這樣官方支援  
-我個人建議使用pactl新增PulseAudio的消除回音模組  
-由於麥克風還是很吵的話  
-開OBS把Echo-Cancel Source設定雜訊消除並且監聽到VirtualSink  
-這時候VirtualMic就會有消除回音模組+OBS設定  
+Windows 擁有的 Realtek 驅動可以開啟雜訊抑制  
+但是 Linux 沒有 Realtek 官方軟體支援降造  
+我個人建議使用 pactl 新增 PulseAudio 的消除回音模組  
+如果麥克風還是很吵的話  
+開 OBS 把 Echo-Cancel Source 麥克風 新增 雜訊消除 並且 用 VirtualSink 監聽  
+這時候 VirtualMic 就會有消除回音模組 + OBS 設定  
 ## 編輯開機sh檔案
 如果沒有資料夾路徑，可以自行建立一個
 ```
@@ -250,11 +250,11 @@ pactl list short modules | grep echo-cancel
 536870916	module-echo-cancel
 ```
 
-# Ubuntu 缺失Library同時無法找到 解決方法
+# 12. Ubuntu 缺失 Library 同時 apt 無法找到
 ## 了解基礎背景知識
 基本上，絕大多數的 Linux 軟體會依賴使用者自行安裝 Linux 的 Library(簡稱：lib)  
 這讓多數軟體自身更加輕量(因為數個軟體共用 lib，所以佔用的空間變更少)  
-但是，有些軟體會綁定特定版本的 Library  
+但是，有些軟體會綁定特定版本的 lib  
 由於 lib 有可能被移除，使用 apt 安裝 lib 並不是萬能的，不能獲取已經移除的 lib  
 ```
 sudo apt install lib名稱1 lib名稱2 ... lib名稱N
@@ -266,7 +266,7 @@ sudo apt install lib名稱1 lib名稱2 ... lib名稱N
 3. 透過複製 lib 與修改開啟位置，達到修復的效果。
 
 
-## Ubuntu GDM 切換應用程式快捷鍵工作列 所有螢幕都要顯示
+## 13. Ubuntu 所有螢幕都要顯示快捷工作列( Dock )
 安裝 Ubuntu GDM 擴充套件
 ```
 sudo apt install gnome-shell-extension-prefs
