@@ -1,4 +1,4 @@
-# Ubuntu 24.04 LTS 發現的問題 或 疑難雜症解法方法
+# Ubuntu 24.04 LTS 小問題與疑難雜症 解法方法
 1. [Ubuntu Nvidia 顯卡驅動模組錯誤 解決方法](#ubuntu-nvidia-driver-模組正確安裝指南最人性化作法)  
 2. [Ubuntu 重新分配磁碟分區 免重灌方法(也適用Windows)](#重新分配系統磁碟分區(不需要重灌))  
 3. [Ubuntu 渲染問題 暫時無法解決](#ubuntu-可能無法解決的渲染視窗問題)  
