@@ -265,7 +265,7 @@ sudo apt install lib名稱1 lib名稱2 ... lib名稱N
 3. 透過複製 lib 與修改開啟位置，達到修復的效果。
 
 
-## Ubuntu GDM 工作列所有螢幕都要顯示
+## Ubuntu GDM 切換應用程式快捷鍵工作列 所有螢幕都要顯示
 安裝 Ubuntu GDM 擴充套件
 ```
 sudo apt install gnome-shell-extension-prefs
