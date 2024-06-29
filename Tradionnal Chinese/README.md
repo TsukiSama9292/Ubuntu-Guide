@@ -276,3 +276,39 @@ sudo apt install gnome-shell-extension-prefs
 2. 開啟 擴充套件 程式  
 3. 點擊 Ubuntu Dock 的三個點再按下設定  
 4. 位置與大小 -> Dock 顯示於 所有螢幕(打勾)
+
+# 14. Ubuntu 設定麥克風耳返功能
+Ubuntu已有預設安裝，可略過。
+```
+sudo apt-get update
+sudo apt-get install alsa-utils
+```
+創建 ALSA 配置文件
+```
+nano ~/.asoundrc
+```
+文件中添加類似以下內容，視情況調整配置，目前是預設喇叭為監聽設備，監聽的是虛擬喇吧。
+```
+pcm.!default {
+    type pulse
+    fallback "sysdefault"
+    hint {
+        show on
+        description "Default ALSA Output (currently PulseAudio Sound Server)"
+    }
+}
+
+ctl.!default {
+    type pulse
+    fallback "sysdefault"
+}
+
+pcm.VirtualMic {
+    type pulse
+    device "VirtualMic"
+}
+```
+使用 arecord 來錄製音頻並通過 aplay 即時播放，按下 Ctrl + C 關閉監聽
+```
+arecord -D VirtualMic -f cd | aplay -
+```
