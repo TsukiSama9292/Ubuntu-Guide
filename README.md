@@ -1,12 +1,12 @@
 # Ubuntu 24.04 LTS 發現的問題 或 疑難雜症解法方法
-[Ubuntu Nvidia 顯卡驅動有問題解決方法](#ubuntu-nvidia-driver-模組正確安裝指南最人性化作法)  
+[Ubuntu Nvidia 顯卡驅動模組錯誤 解決方法](#ubuntu-nvidia-driver-模組正確安裝指南最人性化作法)  
 [Ubuntu 重新分配磁碟分區 免重灌方法(也適用Windows)](#重新分配系統磁碟分區(不需要重灌))  
-[Ubuntu 渲染問題 目前無法解決](#ubuntu-可能無法解決的渲染視窗問題)  
-[Ubuntu 最方便的安裝軟體安裝包方法](#ubuntu-最方便的安裝軟體安裝包方法)  
-[Ubuntu CPu , RAM , Nvidia GPU 使用率顯示](#ubuntu-cpu--ram--nvidia-gpu-顯示)  
-[Ubuntu Steam 開啟軟體或遊戲時，發生錯誤解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見)  
-[Ubuntu 麥克風無法正常運作](#ubuntu-麥克風無法正常運作)  
-[Ubuntu 麥克風雜訊過多](#ubuntu-麥克風雜訊過多)  
+[Ubuntu 渲染問題 暫時無法解決](#ubuntu-可能無法解決的渲染視窗問題)  
+[Ubuntu 最方便的安裝軟體安裝包 解決方法](#ubuntu-最方便的安裝軟體安裝包方法)  
+[Ubuntu CPu , RAM , Nvidia GPU 使用率顯示 解決方法](#ubuntu-cpu--ram--nvidia-gpu-顯示)  
+[Ubuntu Steam 開啟軟體或遊戲時，發生錯誤 解決方法](#ubuntu-官方-steam-執行軟體遊戲-發生錯誤通常是某個資料夾不見)  
+[Ubuntu 麥克風無法正常運作 解決方法](#ubuntu-麥克風無法正常運作)  
+[Ubuntu 麥克風雜訊過多 解決方法](#ubuntu-麥克風雜訊過多)  
 
 # Ubuntu Nvidia Driver 模組正確安裝指南(最人性化作法)
 ## Ubuntu系統安裝
@@ -124,8 +124,13 @@ sudo install build/qnvsm /usr/local/bin
 qnvsm
 ```
 
+# Ubuntu 開 Windows 的 Steam 軟體/遊戲 解決方法
+1. 左上角設定 -> 相容性 -> 為所有產品啟動 Steam Play -> 執行其他產品時使用: Proton Experimental -> 重啟Steam
+2. 隨便下載一個軟體/遊戲 -> 取消下載 -> 改成下載Steam Linux Runtime 3.0(sniper) -> 再下載Proton Experimental -> 重啟
+3. 下載想要的軟體/遊戲 -> 收藏庫 -> 右鍵軟體/遊戲 -> 內容 -> 相容性 -> 強制使用特定 Steam Play 相容性工具(打勾) -> 選擇 Proton Experimental -> 啟動軟體/遊戲
+
 # Ubuntu 官方 steam 執行軟體/遊戲 發生錯誤(通常是某個資料夾不見)
-收藏庫 -> 右鍵軟體 -> 屬性 -> 一般 -> 啟動選動  
+收藏庫 -> 右鍵軟體 -> 內容 -> 一般 -> 啟動選動  
 Library -> Right click software -> Properties -> Geraral -> launch options
 ```
 -force-d3d9
