@@ -18,7 +18,7 @@
 
 # Ubuntu 只使用一個USB灌Ubuntu(適用Windows) 解決方法
 ## 事前準備 : 
-1. windows 10 PC  x 1
+1. windows 10 PC x 1 (Rufus的需求，當然可以換成別的軟體與對應的作業系統)
 2. Linxu PC x 1 (可改成 windows 10 磁碟分割工具)
 3. USB硬碟 1TB (>50GB)，記得先保存重要檔案
 4. windows 下載 Ubuntu 官方iso
