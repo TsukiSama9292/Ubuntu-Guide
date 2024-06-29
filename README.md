@@ -209,10 +209,13 @@ Windows擁有的Realtek驅動可以開啟雜訊抑制
 sudo nano /etc/profile.d/load_echo_cancel.sh
 ```
 ## load_echo_cancel.sh的內容
+底下由一個username改成你開機的使用者名稱  
+這樣才不會有多個使用者都使用這個腳本的情況  
+避免開多餘的虛擬喇叭和麥克風  
 ```
 #!/bin/bash
 echo "Script executed by USER=$USER and XDG_SESSION_TYPE=$XDG_SESSION_TYPE"
-if [ "$USER" = "tuskisama" ] && [ "$XDG_SESSION_TYPE" = "x11" ]; then
+if [ "$USER" = "username" ] && [ "$XDG_SESSION_TYPE" = "x11" ]; then
         echo "Executing pactl load-module commands..."
         pactl load-module module-echo-cancel
         pactl load-module module-null-sink sink_name=VirtualSink sink_propertie>
