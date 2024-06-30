@@ -304,12 +304,15 @@ arecord -D VirtualMic -f cd | aplay -
 ```
 
 # 15. Unity Hub Cannot Run On Ubuntu
-Click to open Unity Hub and wait for a long time with no response.  
+Click to open Unity Hub, wait for a long time, and there is no response.
 The simplest and most direct method is to disable all application restrictions.
+Turn off AppArmor restrictions for unprivileged user namespaces:
 ```
 sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 ```
-Restart Unity Hub, and it should run successfully.
+Restart Unity Hub, and it should run.
+It is recommended not to directly add this to startup scripts.
+This operation may cause security concerns for the system.
 
 # 16. Copying User Configuration on Ubuntu
 Copy desktop environment settings:

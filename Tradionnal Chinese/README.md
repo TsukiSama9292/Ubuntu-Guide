@@ -320,10 +320,13 @@ arecord -D VirtualMic -f cd | aplay -
 # 15. Ubuntu Unity Hub 無法運行
 點擊開啟Unity Hub 等待許久都沒有反應  
 最簡單暴力的作法，停用所有應用程式的限制  
+關閉 AppArmor 對無特權使用者命名空間  
 ```
 sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 ```
 重啟Unity Hub，即可運行
+建議不要直接寫在啟動執行裡面  
+這個操作可能導致系統有安全疑慮  
 
 # 16. Ubuntu 複製使用者配置
 複製桌面環境
