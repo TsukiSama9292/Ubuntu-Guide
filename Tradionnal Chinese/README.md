@@ -17,6 +17,7 @@
 14. [Ubuntu 設定麥克風耳返功能](#14-ubuntu-設定麥克風耳返功能)
 15. [Ubuntu Unity Hub 無法運行](#15-ubuntu-unity-hub-無法運行)
 16. [Ubuntu 複製使用者配置](#16-ubuntu-複製使用者配置)
+17. [Ubuntu 無門檻的同時雙開使用者與多開相同遊戲解決方法](#17-ubuntu-無門檻的同時雙開使用者與多開相同遊戲解決方法)
 
 # 1. Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
@@ -339,7 +340,7 @@ sudo chown -R newuser:newuser /home/newuser/.config
 sudo chown -R newuser:newuser /home/newuser/.local
 ```
 
-# 17. Ubuntu 最簡單的同時多開使用者與多開相同遊戲解決方法
+# 17. Ubuntu 無門檻的同時雙開使用者與多開相同遊戲解決方法
 ## 用途說明
 比較普通的用途是可以快速開一個具有GUI的使用者在背景中，並且可以被任何裝置遠端控制。  
 但對於遊戲玩家可以有特殊的用途，如:

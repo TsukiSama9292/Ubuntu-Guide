@@ -17,7 +17,7 @@
 14. [Setting Up Microphone Loopback Functionality on Ubuntu](#14-setting-up-microphone-loopback-functionality-on-ubuntu)
 15. [Unity Hub Cannot Run On Ubuntu](#15-unity-hub-cannot-run-on-ubuntu)
 16. [Copying User Configuration on Ubuntu](#16-copying-user-configuration-on-ubuntu)
-17. [Easiest Method for Simultaneously Using Multiple Users and Opening Multiple Instances of the Same Game on Ubuntu](#17-easiest-method-for-simultaneously-using-multiple-users-and-opening-multiple-instances-of-the-same-game-on-ubuntu)
+17. [No-threshold simultaneous dual-user and multi-instance game solution on Ubuntu](#17-no-threshold-simultaneous-dual-user-and-multi-instance-game-solution-on-ubuntu)
 
 # 1. Important Considerations for Motherboard Brands when Installing Ubuntu
 It's recommended to choose motherboards with official Ubuntu certification for installing the Ubuntu system, such as Gigabyte and ASUS. Currently, MSI motherboards are known to be very unsuitable for Ubuntu and other Linux distributions. There may be issues with properly displaying the BIOS and operating system during startup. 
@@ -327,7 +327,7 @@ sudo chown -R newuser:newuser /home/newuser/.config
 sudo chown -R newuser:newuser /home/newuser/.local
 ```
 
-# 17. Easiest Method for Simultaneously Using Multiple Users and Opening Multiple Instances of the Same Game on Ubuntu
+# 17. No-threshold simultaneous dual-user and multi-instance game solution on Ubuntu
 ## Purpose
 The primary use case is to quickly launch a GUI-enabled user session in the background that can be remotely controlled from any device. However, it also has specific applications for gamers, such as:
 1. If you need to quickly and effectively run two instances of the same computer game on one computer, this method is ideal and typically takes less than 5 minutes to set up.
