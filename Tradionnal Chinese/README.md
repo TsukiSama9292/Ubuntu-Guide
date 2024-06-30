@@ -72,11 +72,10 @@ sudo reboot
 ### 首次使用Xfce
 ```
 sudo apt update
-sudo apt upgrade
 sudo apt install xfce4
 ```
 然後選擇lightdm作為顯示管理器
-### 重啟lightdm服務
+### 之前有安裝過Xfce4，想要重啟lightdm服務
 ```
 sudo dpkg-reconfigure lightdm 
 sudo reboot
@@ -329,13 +328,27 @@ sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
 這個操作可能導致系統有安全疑慮  
 
 # 16. Ubuntu 複製使用者配置
-複製桌面環境
+這可以執行複製桌面環境，但是複製到steam設定可能會壞掉，因為steam是使用容器建立的，少複製東西就可能會害steam無法正常開啟，所以有steam的話不建議。
 ```
-cp -r /home/olduser/.config /home/newuser/
-cp -r /home/olduser/.local /home/newuser/
+sudo cp -r /home/olduser/.config /home/newuser/
+sudo cp -r /home/olduser/.local /home/newuser/
 ```
 更新新使用者的權限
 ```
 sudo chown -R newuser:newuser /home/newuser/.config
 sudo chown -R newuser:newuser /home/newuser/.local
 ```
+
+# 17. Ubuntu 最簡單的同時多開使用者與多開相同遊戲解決方法
+## 用途說明
+比較普通的用途是可以快速開一個具有GUI的使用者在背景中，並且可以被任何裝置遠端控制。  
+但對於遊戲玩家可以有特殊的用途，如:
+1. 如果說今天你想要在一台電腦上，快速且簡單有效的多開2個相同的電腦遊戲，這個方法將會很適合你，此流程通常不到5分鐘就結束。  
+2. 如果說你有特別想要快速且簡單的多開2個以上相同的Steam遊戲，那這個方法簡直是為你量身訂做的，Ubuntu可以下載安裝的Steam來源很多 :  [steam official](https://store.steampowered.com/about/) , [Flatpak steam](https://ivonblog.com/posts/install-steam-flatpak-on-linux/) , App center (開啟速度非常慢，需要開很多相同再考慮安裝)，理論上加上遠端背景執行可以開6個相同遊戲。
+## 前置工作
+1. 必須要有兩個Ubuntu使用者(之後要登入被控制的使用者要強制關閉遠端session)
+2. 必須有一個 Google 帳號
+## 使用Chrome-remote-desktop SSH登入
+1. 在要被控制使用者透過[Chrome遠端桌面](https://remotedesktop.google.com/access/)，授權SSH登入，幾本上就照著官方說明流程。
+2. 重啟電腦
+3. 打開另一個使用者，透過[Chrome遠端桌面](https://remotedesktop.google.com/access/)控制正在背景執行的session。

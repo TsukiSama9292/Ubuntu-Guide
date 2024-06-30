@@ -17,6 +17,7 @@
 14. [Setting Up Microphone Loopback Functionality on Ubuntu](#14-setting-up-microphone-loopback-functionality-on-ubuntu)
 15. [Unity Hub Cannot Run On Ubuntu](#15-unity-hub-cannot-run-on-ubuntu)
 16. [Copying User Configuration on Ubuntu](#16-copying-user-configuration-on-ubuntu)
+17. [Easiest Method for Simultaneously Using Multiple Users and Opening Multiple Instances of the Same Game on Ubuntu](#17-easiest-method-for-simultaneously-using-multiple-users-and-opening-multiple-instances-of-the-same-game-on-ubuntu)
 
 # 1. Important Considerations for Motherboard Brands when Installing Ubuntu
 It's recommended to choose motherboards with official Ubuntu certification for installing the Ubuntu system, such as Gigabyte and ASUS. Currently, MSI motherboards are known to be very unsuitable for Ubuntu and other Linux distributions. There may be issues with properly displaying the BIOS and operating system during startup. 
@@ -315,7 +316,7 @@ It is recommended not to directly add this to startup scripts.
 This operation may cause security concerns for the system.
 
 # 16. Copying User Configuration on Ubuntu
-Copy desktop environment settings:
+This allows copying of the desktop environment settings, but copying to the Steam configuration might break it. Steam uses containers for its setup, so copying fewer items may prevent Steam from opening correctly. Therefore, it's not recommended if Steam is installed.
 ```
 cp -r /home/olduser/.config /home/newuser/
 cp -r /home/olduser/.local /home/newuser/
@@ -325,3 +326,16 @@ Update permissions for the new user:
 sudo chown -R newuser:newuser /home/newuser/.config
 sudo chown -R newuser:newuser /home/newuser/.local
 ```
+
+# 17. Easiest Method for Simultaneously Using Multiple Users and Opening Multiple Instances of the Same Game on Ubuntu
+## Purpose
+The primary use case is to quickly launch a GUI-enabled user session in the background that can be remotely controlled from any device. However, it also has specific applications for gamers, such as:
+1. If you need to quickly and effectively run two instances of the same computer game on one computer, this method is ideal and typically takes less than 5 minutes to set up.
+2. If you want to rapidly and easily run two or more instances of the same Steam game, this method is tailored for you. Ubuntu offers several sources for downloading and installing Steam:  [steam official](https://store.steampowered.com/about/) , [Flatpak steam](https://ivonblog.com/posts/install-steam-flatpak-on-linux/) and the App Center (which opens slowly and requires consideration for multiple installations). In theory, with remote background execution, you can run up to six instances of the same game.
+## Prerequisites
+1. You must have two Ubuntu users (the user to be logged into must forcibly terminate the remote session).
+2. You need a Google account.
+## Using Chrome Remote Desktop for SSH Login
+1. Enable SSH login for the user to be controlled via [Chrome remote desktop](https://remotedesktop.google.com/access/), following the official setup instructions.
+2. Restart the computer.
+3. Open another user session and control the background session running through [Chrome remote desktop](https://remotedesktop.google.com/access/).
