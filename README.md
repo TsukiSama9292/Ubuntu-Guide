@@ -211,6 +211,11 @@ sudo reboot
 Due to aging or lower-end microphones, you may experience significant background noise. While Windows Realtek drivers support noise suppression, Linux lacks official Realtek software for noise reduction.
 
 I recommend using pactl to add PulseAudio's echo cancellation module. If the microphone remains noisy, use OBS to add Echo-Cancel Source to the microphone and monitor it with VirtualSink.
+## Dowload PulseAudio
+```
+sudo apt update
+sudo apt install pulseaudio
+```
 ## Editing Bootup Script (sh file)
 Create a directory path if it doesn't exist.
 ```
