@@ -18,6 +18,7 @@
 15. [Unity Hub Cannot Run On Ubuntu](#15-unity-hub-cannot-run-on-ubuntu)
 16. [Copying User Configuration on Ubuntu](#16-copying-user-configuration-on-ubuntu)
 17. [No-threshold simultaneous dual-user and multi-instance game solution on Ubuntu](#17-no-threshold-simultaneous-dual-user-and-multi-instance-game-solution-on-ubuntu)
+18. [Download Youtube video or audio on Ubuntu/Colab/Linux](/Download_Youtube_Video_OR_Audio_Author_TsukiSama9292.ipynb)
 
 # 1. Important Considerations for Motherboard Brands when Installing Ubuntu
 It's recommended to choose motherboards with official Ubuntu certification for installing the Ubuntu system, such as Gigabyte and ASUS. Currently, MSI motherboards are known to be very unsuitable for Ubuntu and other Linux distributions. There may be issues with properly displaying the BIOS and operating system during startup. 
