@@ -13,11 +13,12 @@
 10. [Ubuntu 麥克風無法正常運作](#10-ubuntu-麥克風無法正常運作)  
 11. [Ubuntu 麥克風雜訊過多](#11-ubuntu-麥克風雜訊過多)  
 12. [Ubuntu 缺失 Library 同時 apt 無法找到](#12-ubuntu-缺失-library-同時-apt-無法找到)
-13. [Ubuntu 所有螢幕都要顯示快捷工作列( Dock )](#13-ubuntu-所有螢幕都要顯示快捷工作列-dock)
+13. [Ubuntu 所有螢幕都要顯示快捷工作列( Dock )](#13-ubuntu-所有螢幕都要顯示快捷工作列-dock-)
 14. [Ubuntu 設定麥克風耳返功能](#14-ubuntu-設定麥克風耳返功能)
 15. [Ubuntu Unity Hub 無法運行](#15-ubuntu-unity-hub-無法運行)
 16. [Ubuntu 複製使用者配置](#16-ubuntu-複製使用者配置)
 17. [Ubuntu 無門檻的同時雙開使用者與多開相同遊戲解決方法](#17-ubuntu-無門檻的同時雙開使用者與多開相同遊戲解決方法)
+18. [Ubuntu/Colab/Linux 下載YT影片或音檔](/Tradionnal%20Chinese/Download_Youtube_Video_OR_Audio_Author_TsukiSama9292.ipynb)
 
 # 1. Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
