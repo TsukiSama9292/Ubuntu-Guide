@@ -18,7 +18,7 @@
 15. [Ubuntu Unity Hub 無法運行](#15-ubuntu-unity-hub-無法運行)
 16. [Ubuntu 複製使用者配置](#16-ubuntu-複製使用者配置)
 17. [Ubuntu 無門檻的同時雙開使用者與多開相同遊戲解決方法](#17-ubuntu-無門檻的同時雙開使用者與多開相同遊戲解決方法)
-18. [Ubuntu/Colab/Linux 下載YT影片或音檔](/Tradionnal%20Chinese/Download_Youtube_Video_OR_Audio_Author_TsukiSama9292.ipynb)
+18. [好用工具推薦 - 下載YT影片或音檔](/Tradionnal%20Chinese/Download_Youtube_Video_OR_Audio_Author_TsukiSama9292.ipynb)
 
 # 1. Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
@@ -354,3 +354,11 @@ sudo chown -R newuser:newuser /home/newuser/.local
 1. 在要被控制使用者透過[Chrome遠端桌面](https://remotedesktop.google.com/access/)，授權SSH登入，幾本上就照著官方說明流程。
 2. 重啟電腦
 3. 打開另一個使用者，透過[Chrome遠端桌面](https://remotedesktop.google.com/access/)控制正在背景執行的session。
+
+# 18. 
+可以下載任何在 YouTube 上的『影片(w)』或『音檔』  
+本工具特色
+1. 支援 完整播放清單 / 一個影音連結 下載
+2. 支援 選擇『影片解析度』，最高到『8K/60fps』也可以，若畫質不存在，會自動選擇影片最高解析度
+3. 具備使用者界面，可以像是操作網頁一個使用本工具，介面上可以即時監看下載狀態
+4. 支援 Windows/macOS/Linux...主流作業系統，Colab也可以直接運行
