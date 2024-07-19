@@ -18,7 +18,8 @@
 15. [Unity Hub Cannot Run On Ubuntu](#15-unity-hub-cannot-run-on-ubuntu)
 16. [Copying User Configuration on Ubuntu](#16-copying-user-configuration-on-ubuntu)
 17. [No-threshold simultaneous dual-user and multi-instance game solution on Ubuntu](#17-no-threshold-simultaneous-dual-user-and-multi-instance-game-solution-on-ubuntu)
-18. [Download Youtube video or audio on Ubuntu/Colab/Linux](/Download_Youtube_Video_OR_Audio_Author_TsukiSama9292.ipynb)
+18. [Recommended Tools - Download YouTube Videos or Audio](#18-recommended-tools---download-youtube-videos-or-audio)
+19. [Linux - Steam Game Language Settings](#19-linux---steam-game-language-settings)
 
 # 1. Important Considerations for Motherboard Brands when Installing Ubuntu
 It's recommended to choose motherboards with official Ubuntu certification for installing the Ubuntu system, such as Gigabyte and ASUS. Currently, MSI motherboards are known to be very unsuitable for Ubuntu and other Linux distributions. There may be issues with properly displaying the BIOS and operating system during startup. 
@@ -344,4 +345,28 @@ The primary use case is to quickly launch a GUI-enabled user session in the back
 ## Using Chrome Remote Desktop for SSH Login
 1. Enable SSH login for the user to be controlled via [Chrome remote desktop](https://remotedesktop.google.com/access/), following the official setup instructions.
 2. Restart the computer.
-3. Open another user session and control the background session running through [Chrome remote desktop](https://remotedesktop.google.com/access/).
+3. Open another user session and control the background session running through [Chrome remote desktop](https://remotedesktop.google.com/access/)
+
+# 18. Recommended Tools - Download YouTube Videos or Audio
+## [Click here to access Colab (run all cells)](https://colab.research.google.com/drive/1JdXGLfZxmW96OA6zk-FnLPuIdCA_58tf#scrollTo=3EkPsK06aCP8)
+## Features of This Tool:
+1. Provides a feature not available in most tools - Select 'YouTube Video Quality' to enjoy the highest quality & high audio quality, or get smaller files to save space.
+2. Supports selecting 'Video Resolution' up to '8K/60fps'. If the selected quality does not exist, it will automatically select the highest available resolution.
+3. Supports downloading 'public'/'unlisted' 'playlists'/'video links' from YouTube.
+4. Supports downloading 'videos'/'audio files'.
+5. Features a user interface that allows you to use the tool like a web page, with real-time monitoring of download status.
+6. Supports Windows/macOS/Linux, and can also be run directly in Colab.
+## Screenshot
+![Actual GUI Screenshot](/Tradionnal%20Chinese/YT_Downloader_GUI.png)
+
+# 19. Linux - Steam Game Language Settings
+Prerequisite: Ensure Proton version is 7.0 or lower (inclusive).
+Library -> Right-click on the software -> Properties -> General -> Launch Options
+```
+LANG=zh_TW.UTF-8 %command%
+```
+Restart the game to apply changes.
+If there are rendering issues, use the following setting.
+```
+LANG=zh_TW.UTF-8 %command% -force-d3d9
+```

@@ -195,7 +195,6 @@ qnvsm
 
 # 9. Ubuntu Steam 開啟軟體或遊戲 錯誤或黑屏
 收藏庫 -> 右鍵軟體 -> 內容 -> 一般 -> 啟動選動  
-Library -> Right click software -> Properties -> Geraral -> launch options
 ```
 -force-d3d9
 ```
@@ -369,7 +368,6 @@ sudo chown -R newuser:newuser /home/newuser/.local
 # 19. Linux - Steam 遊戲設定語言
 前置條件，確保Proton版本為7.0以下(含)。  
 收藏庫 -> 右鍵軟體 -> 內容 -> 一般 -> 啟動選動  
-Library -> Right click software -> Properties -> Geraral -> launch options
 ```
 LANG=zh_TW.UTF-8 %command% 
 ```
