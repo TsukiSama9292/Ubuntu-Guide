@@ -356,13 +356,15 @@ sudo chown -R newuser:newuser /home/newuser/.local
 
 # 18. 好用工具推薦 - 下載YT影片或音檔
 ## [Colab 連結(按下全部執行即可)](https://colab.research.google.com/drive/1JdXGLfZxmW96OA6zk-FnLPuIdCA_58tf#scrollTo=3EkPsK06aCP8)
-本工具特色:
-1. 具備 絕大多數工具沒有的功能 - 選擇『 Youtube 影片畫質 』，可以享受最高畫質&高音質，也可以獲取更小的檔案，節省空間
-2. 支援 選擇『影片解析度』，最高到『8K/60fps』也可以，若選擇畫質不存在，會自動選擇影片最高解析度
-3. 支援 YouTube 上『公開』/『不公開』的『播放清單』/『影音連結』
-4. 支援 『影片』/『音檔』下載
-5. 具備 使用者界面，可以像是操作網頁一樣使用本工具，介面上可以即時監看下載狀態
-6. 支援 Windows/macOS/Linux，Colab也可以直接運行
+## 本工具特色:
+1.具備 絕大多數工具沒有的功能 - 選擇**『 Youtube 影片畫質 』，可以享受最高畫質&高音質，也可以獲取更小的檔案，節省空間  
+2.支援 選擇『影片解析度』，最高到『8K/60fps』也可以，若選擇畫質不存在，會自動選擇影片最高解析度  
+3.支援 YouTube 上『公開』/『不公開』的『播放清單』/『影音連結』  
+4.支援 『影片』/『音檔』下載  
+5.具備 使用者界面，可以像是操作網頁一樣使用本工具，介面上可以即時監看下載狀態  
+6.支援 Windows/macOS/Linux，Colab也可以直接運行  
+## 實際畫面
+![實際GUI畫面](/Tradionnal%20Chinese/YT_Downloader_GUI.png)
 
 # 19. Linux - Steam 遊戲設定語言
 前置條件，確保Proton版本為7.0以下(含)。  
