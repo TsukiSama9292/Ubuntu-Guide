@@ -18,8 +18,8 @@
 15. [Ubuntu Unity Hub 無法運行](#15-ubuntu-unity-hub-無法運行)
 16. [Ubuntu 複製使用者配置](#16-ubuntu-複製使用者配置)
 17. [Ubuntu 無門檻的同時雙開使用者與多開相同遊戲解決方法](#17-ubuntu-無門檻的同時雙開使用者與多開相同遊戲解決方法)
-18. [好用工具推薦 - 下載YT影片或音檔](/Tradionnal%20Chinese/Download_Youtube_Video_OR_Audio_Author_TsukiSama9292.ipynb)
-
+18. [好用工具推薦 - 下載YT影片或音檔](#18-好用工具推薦---下載yt影片或音檔)
+19. [Linux - Steam 遊戲設定語言](#19-linux---steam-遊戲設定語言)
 # 1. Ubuntu 系統安裝需要注意主機板廠牌
 盡量選擇有Ubuntu官方認證的主機板執行Ubuntu系統安裝，如: 技嘉(Gigabyte) , 華碩(ASUS)  
 目前已知微星(MSI)主機板非常不適合使用Ubuntu和其他Linux發行版  
@@ -189,8 +189,7 @@ qnvsm
 # 8. Ubuntu 開啟 Windows 的 Steam 遊戲方法
 1. 左上角設定 -> 相容性 -> 為所有產品啟動 Steam Play -> 執行其他產品時使用: Proton Experimental -> 重啟Steam
 2. 隨便下載一個軟體/遊戲 -> 取消下載 -> 改成下載Steam Linux Runtime 3.0(sniper) -> 再下載Proton Experimental -> 重啟
-3. 下載想要的軟體/遊戲 -> 收藏庫 -> 右鍵軟體/遊戲 -> 內容 -> 相容性 -> 強制使用特定 Steam Play 相容性工具(打勾) -> 選擇 Proton Experimental -> 啟動軟體/遊戲
-
+3. 下載想要的軟體/遊戲 -> 收藏庫 -> 右鍵軟體/遊戲 -> 內容 -> 相容性 -> 強制使用特定 Steam Play 相容性工具(打勾) -> 選擇 Proton 7.0-6(推薦7.0的版本，設定語言不會出錯) -> 啟動軟體/遊戲
 遊戲如果有異常現象，如:畫面閃爍的情況，可以考慮換一個Proton版本，說不定可以解決。  
 補充知識 : 其實Linux切換TTY(session)登入到數個不同的使用者，可能可以做到Steam遊戲多開，但請注意連網遊戲可能會檢查Mac Address，只有一個網路介面卡的電腦，很可能被官方擋住或Ban掉。
 
@@ -355,10 +354,24 @@ sudo chown -R newuser:newuser /home/newuser/.local
 2. 重啟電腦
 3. 打開另一個使用者，透過[Chrome遠端桌面](https://remotedesktop.google.com/access/)控制正在背景執行的session。
 
-# 18. 
-可以下載任何在 YouTube 上的『影片(w)』或『音檔』  
-本工具特色
-1. 支援 完整播放清單 / 一個影音連結 下載
-2. 支援 選擇『影片解析度』，最高到『8K/60fps』也可以，若畫質不存在，會自動選擇影片最高解析度
-3. 具備使用者界面，可以像是操作網頁一個使用本工具，介面上可以即時監看下載狀態
-4. 支援 Windows/macOS/Linux...主流作業系統，Colab也可以直接運行
+# 18. 好用工具推薦 - 下載YT影片或音檔
+[ 工具連結 (ipynb) ](/Tradionnal%20Chinese/Download_Youtube_Video_OR_Audio_Author_TsukiSama9292.ipynb)    
+本工具特色:
+1. 可以下載任何在 YouTube 上的『影片』或『音檔』
+2. 支援 完整播放清單 / 一個影音連結 下載
+3. 支援 選擇『影片解析度』，最高到『8K/60fps』也可以，若選擇畫質不存在，會自動選擇影片最高解析度
+4. 具備使用者界面，可以像是操作網頁一個使用本工具，介面上可以即時監看下載狀態
+5. 支援 Windows/macOS/Linux，Colab也可以直接運行
+
+# 19. Linux - Steam 遊戲設定語言
+前置條件，確保Proton版本為7.0以下(含)。  
+收藏庫 -> 右鍵軟體 -> 內容 -> 一般 -> 啟動選動  
+Library -> Right click software -> Properties -> Geraral -> launch options
+```
+LANG=zh_TW.UTF-8 %command% 
+```
+重啟遊戲，即可。  
+若有渲染問題，請使用以下設定。
+```
+LANG=zh_TW.UTF-8 %command% -force-d3d9
+```
