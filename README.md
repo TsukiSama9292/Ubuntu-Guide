@@ -348,7 +348,7 @@ The primary use case is to quickly launch a GUI-enabled user session in the back
 3. Open another user session and control the background session running through [Chrome remote desktop](https://remotedesktop.google.com/access/)
 
 # 18. Recommended Tools - Download YouTube Videos or Audio
-## [Click here to access Colab (run all cells)](https://colab.research.google.com/drive/1JdXGLfZxmW96OA6zk-FnLPuIdCA_58tf#scrollTo=3EkPsK06aCP8)
+## [Click here to access Colab (run all cells)](https://colab.research.google.com/drive/1H0XnxsboGBenge54QQ2VeBUQuY9qiZxT)
 ## Features of This Tool:
 1. Provides a feature not available in most tools - Select 'YouTube Video Quality' to enjoy the highest quality & high audio quality, or get smaller files to save space.
 2. Supports selecting 'Video Resolution' up to '8K/60fps'. If the selected quality does not exist, it will automatically select the highest available resolution.
