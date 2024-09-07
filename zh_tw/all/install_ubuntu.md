@@ -21,7 +21,7 @@
 13. 安裝完 , 立即重啟 , **不要拔掉USB , 直接按Enter** 
 14. 若有其他系統(Windows) , 會進入選擇系統畫面(`grub`) , 選擇 Ubuntu 開機(不動作也會自動進入)
 15. 進入 Ubuntu 系統 , 之前的 `Ubuntu USB Live` 的磁碟分區可以`格式化`(自行運用)
-
+16. 沒有問題的話 , 推薦接著做 [硬體/設備篇 - 顯示管理器與圖形管理器](./display_manager_and_graphics_manager.md)
 # 3. 僅一個硬碟安裝 Windows / Ubuntu 雙系統
 ## 事前準備
 1. 與 安裝Ubuntu系統到USB 相同
@@ -32,3 +32,4 @@
 4. 安裝Ubuntu系統到USB 的 4~12 步驟  
 5. 安裝完 , 立即重啟 , `拔掉USB` , 再按Enter
 6. 會進入選擇系統畫面(`grub`) , 方向鍵"上/下"選擇系統 , 按Enter進入
+7. 沒有問題的話 , 推薦接著做 [硬體/設備篇 - 顯示管理器與圖形管理器](./display_manager_and_graphics_manager.md)

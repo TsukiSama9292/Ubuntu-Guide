@@ -8,18 +8,20 @@
 ## 通用項目
 ### 安裝/驅動/系統篇
 1. [系統安裝需要注意主機板廠牌](zh_tw/all/system_install_notice.md)
-2. [安裝Ubuntu系統到USB](zh_tw/all/install_ubuntu.md/#2-安裝ubuntu系統到usb)
-3. [僅一個硬碟安裝 Windows / Ubuntu 雙系統](zh_tw/all/install_ubuntu.md/#3-僅一個硬碟安裝-windows--ubuntu-雙系統)
+2. [安裝Ubuntu系統到USB](zh_tw/all/install_ubuntu.md)
+3. [僅一個硬碟安裝 Windows / Ubuntu 雙系統](zh_tw/all/install_ubuntu.md)
 4. [Nvidia GPU 驅動錯誤](zh_tw/all/nvidia_gpu_driver_error.md)
 ### 硬體/設備篇
 1. [顯示管理器與圖形管理器](zh_tw/all/display_manager_and_graphics_manager.md)
 2. [工作管理員+Nvidia GPU 監控+基本系統資訊](zh_tw/all/work_manager_and_hardware_monitoring.md)
 3. [顯示器視窗問題](zh_tw/all/display_monitor_window_problem.md)
 ### 軟體篇
-1. [啟動 Windows 軟體方法](zh_tw/all/launch_windows_software.md)
+1. [安裝 Chrome 瀏覽器](zh_tw/all/install_chrome.md)
+2. [啟動 Windows 軟體方法](zh_tw/all/launch_windows_software.md)
+3. [常見的套件管理介紹](/zh_tw/all/package_management.md)
 ### 遊戲篇
 1. [Steam 遊戲與錯誤](zh_tw/all/steam_game_error_or_black_screen.md)
- 
+
 
 ## 24.04 專屬項目
 ### 軟體篇

@@ -4,8 +4,10 @@
 ## 更換步驟
 1. 安裝 `lightdm` 與 `xfce4`
 ```bash
-sudo apt update && sudo apt install lightdm -y
-# 接著按下 `Enter` 鍵，選擇 `lightdm` 作為顯示管理器  
+sudo apt update && sudo apt upgrade -y && sudo apt install lightdm -y
+```
+```bash
+# 跳出終端機顯示紫色的畫面 , 接著按下 `Enter` 鍵 , 使用 `方向建(下)` , 選擇 `lightdm` 作為顯示管理器
 ```
 2. 安裝 `xfce4`
 ```bash

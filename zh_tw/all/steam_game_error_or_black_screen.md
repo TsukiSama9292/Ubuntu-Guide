@@ -1,7 +1,7 @@
 # Steam 遊戲與錯誤
 1. 到 [Steam](https://store.steampowered.com/about/) 網站 , 下載 Steam.deb
 2. 到下載的資料夾 , 安裝 Steam.deb
-```
+```bash
 sudo dpkg -i <Steam安裝包名稱>.deb
 ### 顯示缺乏32位元
 sudo dpkg --add-architecture i386
