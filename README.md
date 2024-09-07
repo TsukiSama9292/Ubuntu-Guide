@@ -2,7 +2,7 @@
 ![# Ubuntu-Guide](assets/logo.png)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/TsukiSama9292/Ubuntu-Guide?style=social)](https://github.com/TsukiSama9292/Ubuntu-Guide/stargazers)
-[![GitHub Code License](https://img.shields.io/github/license/TsukiSama9292/Ubuntu-Guide)]
+[![GitHub Code License](https://img.shields.io/github/license/TsukiSama9292/Ubuntu-Guide)](LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/TsukiSama9292/Ubuntu-Guide)](https://github.com/TsukiSama9292/Ubuntu-Guide/commits/main)
 
 ## 通用項目
