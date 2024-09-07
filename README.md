@@ -1,4 +1,4 @@
-# Ubuntu 24.04/22.04 LTS 基礎問題解決方案
+# Ubuntu 24.04/22.04 LTS 安裝與基礎問題解決方案
 ![# Ubuntu-Guide](assets/logo.png)
 
 [![GitHub Repo stars](https://img.shields.io/github/stars/TsukiSama9292/Ubuntu-Guide?style=social)](https://github.com/TsukiSama9292/Ubuntu-Guide/stargazers)
