@@ -15,6 +15,7 @@
 1. [顯示管理器與圖形管理器](zh_tw/all/display_manager_and_graphics_manager.md)
 2. [工作管理員+Nvidia GPU 監控+基本系統資訊](zh_tw/all/work_manager_and_hardware_monitoring.md)
 3. [顯示器視窗問題](zh_tw/all/display_monitor_window_problem.md)
+4. [麥克風噪音抑制](zh_tw/all/microphone_noise_suppression.md)
 ### 軟體篇
 1. [安裝 Chrome 瀏覽器](zh_tw/all/install_chrome.md)
 2. [啟動 Windows 軟體方法](zh_tw/all/launch_windows_software.md)
