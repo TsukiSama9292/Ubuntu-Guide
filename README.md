@@ -20,6 +20,7 @@
 1. [安裝 Chrome 瀏覽器](zh_tw/all/install_chrome.md)
 2. [啟動 Windows 軟體方法](zh_tw/all/launch_windows_software.md)
 3. [常見的套件管理介紹](/zh_tw/all/package_management.md)
+4. [移除和清除軟體](zh_tw/all/remove_and_clear.md)
 ### 遊戲篇
 1. [Steam 遊戲與錯誤](zh_tw/all/steam_game_error_or_black_screen.md)
 
